@@ -1,0 +1,51 @@
+/* ── Reset + base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #0f1117;
+  --bg-2:       #161b22;
+  --bg-3:       #1c2128;
+  --border:     #30363d;
+  --border-2:   #21262d;
+  --teal:       #1DB385;
+  --teal-dim:   #0f6e56;
+  --teal-bg:    #0d2818;
+  --text:       #e6edf3;
+  --text-2:     #8b949e;
+  --text-3:     #656d76;
+  --danger:     #f85149;
+  --danger-bg:  #1f1010;
+  --warn:       #d29922;
+  --warn-bg:    #1c1810;
+  --success:    #3fb950;
+  --radius:     8px;
+  --radius-lg:  12px;
+  --shadow:     0 1px 3px rgba(0,0,0,0.4);
+  --shadow-lg:  0 8px 24px rgba(0,0,0,0.5);
+  font-size: 14px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { cursor: pointer; font-family: inherit; font-size: 14px; }
+input, textarea { font-family: inherit; font-size: 14px; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Utility ──────────────────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+}
